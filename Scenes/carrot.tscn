@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2cbetnaj4lpo"]
+
+[ext_resource type="Script" uid="uid://d2velpti0ksb0" path="res://Scenes/carrot.gd" id="1_nu5ix"]
+[ext_resource type="Texture2D" uid="uid://ch5asswtgcxfg" path="res://graphics/player/basic/carrot.png" id="2_nu5ix"]
+[ext_resource type="AudioStream" uid="uid://v3i6a5ie0ji2" path="res://audio/power_up_01.ogg" id="3_papeb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea3nj"]
+size = Vector2(15, 14)
+
+[node name="carrot" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_nu5ix")
+
+[node name="sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("2_nu5ix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_ea3nj")
+
+[node name="pickup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_papeb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

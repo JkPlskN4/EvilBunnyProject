@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmg5angvmp1n6"]
+
+[ext_resource type="PackedScene" uid="uid://begoyvt0e2y0x" path="res://Scenes/level.tscn" id="1_q7a3f"]
+[ext_resource type="PackedScene" uid="uid://bkapjg3bo0rfh" path="res://Scenes/ui.tscn" id="2_6p7b3"]
+
+[node name="gam" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.37, 1, 1, 1)
+
+[node name="Level" parent="." instance=ExtResource("1_q7a3f")]
+
+[node name="UI" parent="." instance=ExtResource("2_6p7b3")]

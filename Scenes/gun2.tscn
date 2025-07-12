@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhu8x3d3rl204"]
+
+[ext_resource type="Script" uid="uid://b5eadmhd4bib7" path="res://Scenes/gun2.gd" id="1_tnoi8"]
+[ext_resource type="Texture2D" uid="uid://c04crhhqseni" path="res://graphics/player/gun/minigun.png" id="2_tnoi8"]
+[ext_resource type="AudioStream" uid="uid://v3i6a5ie0ji2" path="res://audio/power_up_01.ogg" id="3_fmvdw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4teu"]
+size = Vector2(10, 6)
+
+[node name="minigun" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_tnoi8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tnoi8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k4teu")
+
+[node name="pickup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fmvdw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

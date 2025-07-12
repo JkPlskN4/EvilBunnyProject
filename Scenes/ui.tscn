@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkapjg3bo0rfh"]
+
+[ext_resource type="Script" uid="uid://bj5huiac3oovq" path="res://Scenes/ui.gd" id="1_jxero"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxero"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdvrb"]
+bg_color = Color(0.862745, 0.203922, 0.223529, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_jxero")
+
+[node name="hlthcont" type="MarginContainer" parent="."]
+offset_right = 200.0
+offset_bottom = 45.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="hlthbar" type="ProgressBar" parent="hlthcont"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/background = SubResource("StyleBoxFlat_jxero")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qdvrb")
+value = 30.0
+show_percentage = false
+
+[node name="bullets" type="MarginContainer" parent="."]
+offset_left = 243.0
+offset_top = 15.0
+offset_right = 333.0
+offset_bottom = 55.0
+
+[node name="bltcnt" type="Label" parent="bullets"]
+layout_mode = 2

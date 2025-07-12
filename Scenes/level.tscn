@@ -1,0 +1,114 @@
+[gd_scene load_steps=12 format=4 uid="uid://begoyvt0e2y0x"]
+
+[ext_resource type="Script" uid="uid://e10ohkf0t802" path="res://Scenes/level.gd" id="1_81xng"]
+[ext_resource type="Texture2D" uid="uid://culfubgqxhygu" path="res://graphics/level/tilesets/level_tilemap.png" id="1_tumq0"]
+[ext_resource type="PackedScene" uid="uid://bpf0u7vcyc25n" path="res://Scenes/hero.tscn" id="2_k5f4k"]
+[ext_resource type="PackedScene" uid="uid://i6lg2wka7qd2" path="res://Scenes/bee.tscn" id="3_6phgx"]
+[ext_resource type="PackedScene" uid="uid://ckdua24rs07l6" path="res://Scenes/cherry.tscn" id="5_8c0lf"]
+[ext_resource type="PackedScene" uid="uid://cmhyioqnnefl2" path="res://Scenes/gun.tscn" id="5_wqkje"]
+[ext_resource type="PackedScene" uid="uid://bcch4toabsmlt" path="res://Scenes/worm.tscn" id="6_0f350"]
+[ext_resource type="PackedScene" uid="uid://bhu8x3d3rl204" path="res://Scenes/gun2.tscn" id="6_754fn"]
+[ext_resource type="PackedScene" uid="uid://b2cbetnaj4lpo" path="res://Scenes/carrot.tscn" id="7_bvt00"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k5f4k"]
+texture = ExtResource("1_tumq0")
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:1/0 = 0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:2/0 = 0
+9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_6phgx"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_k5f4k")
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_81xng")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-1, 0)
+tile_map_data = PackedByteArray("AAAHAAcAAAABAAIAAAAHAAgAAAAHAAEAAAAIAAcAAAAHAAAAAAAIAAgAAAAHAAEAAAAJAAcAAAACAAIAAAAJAAgAAAAHAAEAAAAKAAcAAAABAAIAAAAKAAgAAAAHAAEAAAALAAcAAAAHAAAAAAALAAgAAAAHAAEAAAAMAAcAAAAAAAIAAAAMAAgAAAAHAAEAAAANAAcAAAACAAIAAAANAAgAAAAHAAEAAAAOAAcAAAAHAAAAAAAOAAgAAAAHAAEAAAAHAAkAAAAHAAEAAAAHAAoAAAAHAAEAAAAIAAkAAAAHAAEAAAAIAAoAAAAHAAEAAAAJAAkAAAAGAAIAAAAJAAoAAAAHAAEAAAAKAAkAAAAFAAIAAAAKAAoAAAAHAAEAAAALAAkAAAAGAAIAAAALAAoAAAAHAAEAAAAMAAkAAAAFAAIAAAAMAAoAAAAHAAEAAAANAAkAAAAHAAEAAAANAAoAAAAHAAEAAAAOAAkAAAAHAAEAAAAOAAoAAAAHAAEAAAAGAAcAAAAEAAAAAAAFAAcAAAAEAAAAAAAEAAcAAAAEAAAAAAADAAcAAAAEAAAAAAACAAcAAAAEAAAAAAAPAAcAAAAEAAAAAAAQAAcAAAAEAAAAAAARAAcAAAAEAAAAAAASAAcAAAAEAAAAAAATAAcAAAAEAAAAAAAUAAcAAAAEAAAAAAAVAAcAAAAEAAAAAAAWAAcAAAAEAAAAAAAXAAcAAAAEAAAAAAAYAAcAAAAEAAAAAAAZAAcAAAAEAAAAAAAaAAcAAAAEAAAAAAABAAcAAAAEAAAAAAAAAAcAAAAEAAAAAAD//wcAAAAEAAAAAAD+/wcAAAAEAAAAAAD9/wcAAAAEAAAAAAD8/wcAAAAEAAAAAAD7/wcAAAADAAIAABAbAAcAAAADAAIAAAA=")
+tile_set = SubResource("TileSet_6phgx")
+
+[node name="hero" parent="." instance=ExtResource("2_k5f4k")]
+position = Vector2(115, 104)
+
+[node name="Bullets" type="Node2D" parent="."]
+
+[node name="Items" type="Node" parent="."]
+
+[node name="Gun" parent="Items" instance=ExtResource("5_wqkje")]
+position = Vector2(160, 99)
+
+[node name="cherry" parent="Items" instance=ExtResource("5_8c0lf")]
+position = Vector2(70, 104)
+
+[node name="minigun" parent="Items" instance=ExtResource("6_754fn")]
+position = Vector2(139, 100)
+
+[node name="carrot" parent="Items" instance=ExtResource("7_bvt00")]
+position = Vector2(89, 103)
+
+[node name="enemies" type="Node" parent="."]
+
+[node name="Bee" parent="enemies" node_paths=PackedStringArray("marker1", "marker2") instance=ExtResource("3_6phgx")]
+position = Vector2(253, 81)
+marker1 = NodePath("../../Markers/bm1")
+marker2 = NodePath("../../Markers/bm2")
+
+[node name="worm" parent="enemies" instance=ExtResource("6_0f350")]
+position = Vector2(187, 108)
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="bm1" type="Marker2D" parent="Markers"]
+position = Vector2(302, 83)
+
+[node name="bm2" type="Marker2D" parent="Markers"]
+position = Vector2(365, 83)
+
+[connection signal="bull" from="hero" to="." method="_on_hero_bull"]
+[connection signal="area_entered" from="enemies/worm" to="hero" method="_on_worm_area_entered"]

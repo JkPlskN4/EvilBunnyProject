@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckdua24rs07l6"]
+
+[ext_resource type="Script" uid="uid://bc5t83bgi38h1" path="res://Scenes/cherry.gd" id="1_ea3nj"]
+[ext_resource type="Texture2D" uid="uid://dgdhqeymgq56j" path="res://graphics/player/basic/cherry.png" id="1_h60d7"]
+[ext_resource type="AudioStream" uid="uid://v3i6a5ie0ji2" path="res://audio/power_up_01.ogg" id="3_8cj1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea3nj"]
+size = Vector2(15, 14)
+
+[node name="cherry" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_ea3nj")
+
+[node name="sprite2d" type="Sprite2D" parent="."]
+texture = ExtResource("1_h60d7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_ea3nj")
+
+[node name="pickup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8cj1e")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
